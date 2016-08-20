@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		@font-face{
+			font-family: boldFont;
+			src: url(open-sans-bold.ttf);
+		}
+		#back{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100% !important;
+			background-image: url(drawing.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#top-panel{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,1);
+			color: white;
+			text-align: center;
+			font-family: boldFont;
+			font-size: 150px;
+			padding-top: 15vh;
+			transition: all 3s ease;
+		}
+		#day{
+			margin-top: -200px; 
+			margin-left: 100px;
+		}
+		#topLogo{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: auto;
+			z-index: 5;
+			font-size: 25px;
+			color: white;
+			text-align: center;
+		}
+		a{
+			background: red;
+			border: 0px solid;
+			color: white;
+			font-size: 25px;
+			position: fixed;
+			text-decoration: none;
+			top: 80%;
+			padding: 10px 10px;
+		}
+		@media screen and (max-width: 850px) {
+			#top-panel{
+				font-size: 80px;
+				padding-top: 20vh;
+			}
+			#day{
+				margin-top:-70px; 
+			}
+			a{
+				font-size: 25px;
+				top: 65%;
+			}
+
+		}
+		@media screen and (max-width: 480px) {
+			#back{
+				background-size: cover; 
+				background-position: left; 
+			}
+			#top-panel{
+				font-size: 50px;
+				padding-top: 25vh;
+			}
+			#day{
+				margin-top:-50px; 
+			}
+			a{
+				font-size: 15px;
+				top: 65%;
+			}
+
+		}
+	</style>
+</head>
+<body>
+<div id="topLogo">gawds</div>
+<div id="back"></div>
+<div id="top-panel" onmousemove="start()">
+<p id="dev">developer's</p><p id="day">day</p>
+<center><a href="" id="but">REGISTER NOW</a></center>
+</div>
+</body>
+<script type="text/javascript">
+	var to = document.getElementById('top-panel');
+	var but = document.getElementById('but');
+	but.style.left = (window.innerWidth/2)-(but.offsetWidth);
+	function start(){
+		to.style.background = 'rgba(0,0,0,0.1)';
+	}
+</script>
+</html>
